@@ -1,20 +1,13 @@
-amount_chicken_menu = int(input())
-amount_fish_menu = int(input())
-amount_veggie_menu = int(input())
+number_chicken_menus = int(input())
+number_fish_menus = int(input())
+number_vegan_menus = int(input())
 
-chicken_menu = 10.35
-fish_menu = 12.40
-veggie_menu = 8.15
-delivery_fee = 2.50
+chicken_menu_price = 10.35 * number_chicken_menus
+fish_menu_price = 12.40 * number_fish_menus
+vegan_menu_price = 8.15 * number_vegan_menus
 
-final_price_chicken = amount_chicken_menu * chicken_menu
-final_price_fish = amount_fish_menu * fish_menu
-final_price_veggie = amount_veggie_menu * veggie_menu
-
-total_sum = final_price_veggie + final_price_fish + final_price_chicken
-
-desert_price = total_sum * (20 / 100)
-
-final_sum = total_sum + desert_price + delivery_fee
-
-print(f'{final_sum:.2f}')
+total_sum = chicken_menu_price + fish_menu_price + vegan_menu_price
+dessert_price = total_sum * 0.2
+delivery_fee = 2.5
+final_sum = total_sum + dessert_price + delivery_fee
+print(final_sum)
