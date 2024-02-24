@@ -1,9 +1,8 @@
-deposit_sum = float(input())
-deposit_period_months = int(input())
-annual_interest = float(input())
+deposit = float(input())
+term = int(input())
+apy = float(input())
 
-sum_interest = deposit_sum * (annual_interest / 100)
-interest_for_month = sum_interest / 12
-total_sum = deposit_sum + deposit_period_months * interest_for_month
-
+total_apy = deposit * apy / 100
+yield_per_month = total_apy / 12
+total_sum = deposit + term * yield_per_month
 print(total_sum)
