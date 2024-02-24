@@ -1,18 +1,13 @@
-pack_of_pens = int(input())
-pack_of_markers = int(input())
-cleaning_liquid = int(input())
+number_pack_pens = int(input())
+number_pack_markers = int(input())
+liquid_liter = int(input())
 discount = int(input())
 
-pens = 5.80
-markers = 7.20
-liquid = 1.20
-discount_ani = discount / 100
+pens_price = 5.8 * number_pack_pens
+markers_price = 7.2 * number_pack_markers
+liquid_liter_price = 1.2 * liquid_liter
 
-final_price_pens = pack_of_pens * pens
-final_price_markers = pack_of_markers * markers
-final_price_liquid = cleaning_liquid * liquid
+total_sum = pens_price + markers_price + liquid_liter_price
+final_sum = total_sum - (total_sum * discount/100)
+print(f'{final_sum:.2f}')
 
-total_price = final_price_pens + final_price_liquid + final_price_markers
-final_price = total_price - (total_price * discount_ani)
-
-print(final_price)
