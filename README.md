@@ -1,2 +1,2 @@
-# BasicModule
-Basic exercises for python
+# PythonModule
+Exercises for Python
