@@ -1,5 +1,5 @@
-usd_currency = float(input())
+usd = float(input())
 
-bgn = usd_currency * 1.79549
-
-print(bgn)
+bgn = 1.79549
+usd_bgn = usd * bgn
+print(usd_bgn)
