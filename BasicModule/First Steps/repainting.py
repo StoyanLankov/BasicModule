@@ -1,20 +1,15 @@
-amount_nylon_m2 = int(input())
-amount_paint_l = int(input())
-amount_thinner_l = int(input())
-hours_workers = int(input())
+total_nylon_m2 = int(input())
+total_paint_liter = int(input())
+total_thinner_liter = int(input())
+working_hours = int(input())
 
-price_nylon = 1.50
-price_paint = 14.50
-price_thinner = 5.00
-bags = 0.40
+nylon_price = (total_nylon_m2 + 2) * 1.5
+paint_price = (total_paint_liter * 1.1) * 14.5
+thinner_price = total_thinner_liter * 5
+bags = 0.4
 
-extra_paint = (amount_paint_l * 1.1) * price_paint
-extra_nylon = (amount_nylon_m2 + 2) * price_nylon
-total_thinner = amount_thinner_l * price_thinner
+total_sum_materials = nylon_price + paint_price + thinner_price + bags
+workers_wage = (total_sum_materials * 30/100) * working_hours
+final_sum = total_sum_materials + workers_wage
 
-sum = extra_nylon + extra_paint + total_thinner + bags
-
-payment_workers = sum * (30 / 100)
-final_sum = sum + payment_workers * hours_workers
-
-print(final_sum)
+print(f'{final_sum:.2f}')
